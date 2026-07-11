@@ -9,7 +9,6 @@ import pathlib
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-import matplotlib.patheffects as path_effects
 
 
 ROOT_DIR = pathlib.Path(__file__).parent.parent

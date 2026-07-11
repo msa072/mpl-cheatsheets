@@ -8,7 +8,6 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-from matplotlib.collections import PatchCollection
 
 
 ROOT_DIR = pathlib.Path(__file__).parent.parent
