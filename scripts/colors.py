@@ -26,8 +26,8 @@ palettes = {
     'raw' : ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w'],
     'rgba' : [(1, 0, 0), (1, 0, 0, 0.75), (1, 0, 0, 0.50), (1, 0, 0, 0.25)],
     'HexRGBA' : ["#FF0000", "#FF0000BB", "#FF000088", "#FF000044"],
-    'cycle' : ["C%d" % i for i in range(10)],
-    'grey' : ["%1.1f" % (i/10) for i in range(11)],
+    'cycle' : [f"C{i}" for i in range(10)],
+    'grey' : [f"{i/10:1.1f}" for i in range(11)],
     'name' : ["DarkRed", "Firebrick", "Crimson", "IndianRed", "Salmon" ] }
 
 for name, colors in palettes.items():

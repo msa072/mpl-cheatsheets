@@ -30,7 +30,7 @@ Y3 = np.random.uniform(Y1, Y2, len(X))
 def minor_tick(x, pos):
     if not x % 1.0:
         return ""
-    return "%.2f" % x
+    return f"{x:.2f}"
 
 
 ax.xaxis.set_major_locator(MultipleLocator(1.000))

@@ -26,13 +26,10 @@ markers = [
     "1", "2", "3", "4", "+", "x", "|", "_", 4, 5, 6, 7,
     ".", "o", "s", "P", "X", "*", "p", "D", "<", ">", "^", "v", ]
 for x, y, marker in zip(X, Y, markers):
-    if y == 3: fc = "white"
-    else: fc = "C1"
+    fc = "white" if y == 3 else "C1"
     plt.scatter(x, 1+y, s=100, marker=marker, fc=fc, ec="C1", lw=0.5)
 
-    if y == 1: marker = "\$%s\$" % marker
-    if isinstance(marker, str): text = "'%s'" % marker
-    else: text = '%s' % marker
+    text = f"{marker!r}".replace("$", r"\$")
     plt.text(x, 1+y-0.4, text,
              size="x-small", ha="center", va="top", family="Monospace")
 
@@ -50,7 +47,7 @@ for x0, mark in zip(X0, marks):
     Y = y*np.ones(len(X))
     ax.plot(X, Y, linewidth=1, color="black",
             marker=".", mfc="white", mec="black", mew="1", markevery=mark)
-    ax.text((X[0]+X[-1])/2, y-0.2, '%s' % str(mark),
+    ax.text((X[0]+X[-1])/2, y-0.2, str(mark),
             size="x-small", ha="center", va="top")
 
 plt.text(.7, 1, "markevery",
