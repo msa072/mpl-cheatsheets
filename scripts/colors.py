@@ -46,7 +46,7 @@ for name, colors in palettes.items():
         text_color = "black" if luma[i] > 0.5 else "white"
         text = str(colors[i]).replace(' ', '')
         ax.text((i+0.5)*dx, (ymin+ymax)/2, text, color=text_color, zorder=10,
-                family="Source Code Pro", size=9, ha="center", va="center")
+                family="Source Code Pro", weight="bold", size=9, ha="center", va="center")
 
     fig.savefig(ROOT_DIR / f"figures/colors-{name}.pdf")
     ax.clear()
